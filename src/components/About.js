@@ -60,6 +60,7 @@ const About = () => {
   return (
     <div className="about-page">
       <div className="content">
+        <h1 className="about-heading">What was the boarding home policy?</h1>
         {content.map((line, index) => (
           <p key={index} className="fade-line">
             {line}

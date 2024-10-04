@@ -45,25 +45,36 @@
 .hero h1 {
     font-size: 4.5rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle text shadow for emphasis */
     animation: slideIn 1s ease-in-out;
 }
 
-/* Hero subheading */
-.hero p {
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-bottom: 40px;
-    animation: fadeIn 2s ease-in-out 0.5s; /* Slight delay for subheading */
+.hero-text-container .smaller-heading {
+    font-size: 3.3rem; /* Adjust the size of the second <h1> */
+    font-weight: 450; /* Optional: Adjust the weight if needed */
+    margin-top: 0; /* Remove any additional space between the headings */
+    margin-bottom: 20px; /* Add some space before the paragraph */
 }
+
+/* Hero subheading */
+
+.hero p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 0px;
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 2s ease-in-out 0.5s forwards; /* Slight delay for subheading and use 'forwards' to maintain final state */
+}
+
 
 /* Call-to-action button */
 .hero .cta-button {
     padding: 15px 30px;
-    background-color: #fff7d6;
+    background-color: #ffeb9a;
     border: none;
     border-radius: 50px;
     color: black;

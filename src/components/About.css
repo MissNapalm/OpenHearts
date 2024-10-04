@@ -1,50 +1,63 @@
 /* About Page Styles */
 .about-page {
-    min-height: 100vh; /* Changed from 200vh to 100vh to fit the screen */
+    min-height: 100vh; /* Full height of the viewport */
     display: flex;
     justify-content: center;
-    align-items: center; /* Changed from flex-start to center for vertical alignment */
-    background-image: url('aboutus.jpg'); /* Make sure this image exists */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* This keeps the background fixed while scrolling */
-    color: white;
-    text-align: center;
-    padding: 0; /* Removed top padding */
-    font-family: 'Roboto', serif;
-    overflow-y: auto; /* Allow vertical scrolling if content exceeds viewport height */
-  }
+    align-items: flex-start; /* Align items at the top */
+    background-image: url('aboutus.jpg'); /* Background image */
+    background-size: cover; /* Ensure the background covers the entire area */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Makes the background fixed when scrolling */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 100px 40px 40px; /* Add padding */
+    font-family: 'Lato', sans-serif; /* Thin and sophisticated font */
+}
+
+.content .about-heading {
+    font-size: 1.8rem;
+    font-weight: 100;
+}
   
-  /* Content block */
-  .content {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 800px;
-    width: 90%; /* Changed from 100% to 90% for some side margins */
-    line-height: 1.8;
-    font-size: 1.2rem;
-    margin: 140px auto 40px; /* Added top margin to account for the drawer */
-    overflow-y: auto; /* Allow scrolling within the content if it's too long */
-    max-height: calc(100vh - 180px); /* Max height considering top and bottom margins */
-  }
+/* Content block */
+.content {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the text */
+    padding: 40px; /* Padding inside the content block */
+    border-radius: 10px; /* Slightly rounded corners */
+    max-width: 600px; /* Reduce max-width to make the text block narrow */
+    width: 120%; /* Full width */
+    line-height: 1.4; /* Decrease line height for a more compact look */
+    font-size: 1.1rem; /* Slightly smaller font size */
+    margin: 0 auto; /* Center the content block */
+    letter-spacing: -0.5px; /* Make letters tighter together */
+    word-spacing: -2px; /* Make words closer together */
+    backdrop-filter: blur(10px); /* Apply background blur beneath the container */
+}
   
-  /* Lines start invisible and move slightly upward */
-  .fade-line {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-  }
+/* Heading style */
+.content h1 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+    font-weight: 300; /* Keep the same thin, delicate font weight */
+}
   
-  /* Fade-in effect */
-  .fade-line.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Lines start invisible and move slightly upward */
+.fade-line {
+    opacity: 0; /* Initially invisible */
+    transform: translateY(20px); /* Slight upward movement for the fade-in effect */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for fade and movement */
+}
   
-  /* Heading styles */
-  .about-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffcc00;
-  }
+/* Fade-in effect */
+.fade-line.fade-in {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+  
+/* Additional style to make font appear thinner */
+.content p {
+    font-weight: 100; /* Set font weight to hairline */
+    text-shadow: none; /* Remove shadow for a cleaner look */
+    letter-spacing: -0.5px; /* Reduce spacing between letters */
+    word-spacing: -2px; /* Reduce spacing between words */
+}

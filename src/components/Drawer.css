@@ -19,13 +19,15 @@
     align-items: center;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 150;
 }
 
-/* Drawer when open */
 .drawer.open {
     top: -140px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    transition: top 0.6s ease-out, box-shadow 0.6s ease-out; /* Smoother animation */
 }
+
 
 /* Text styling */
 .menu-text {
@@ -62,22 +64,24 @@
     padding: 0;
     margin: 0;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    pointer-events: none; /* Disable interaction when drawer is closed */
+    transition: opacity 0.4s ease, pointer-events 0.4s ease;
 }
 
 .drawer ul.visible {
     opacity: 1;
+    pointer-events: all; /* Enable interaction when drawer is open */
 }
 
 /* Refined menu item styling */
 .drawer ul li a, .drawer ul li span {
     color: #f0f0f0;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     position: relative;
     display: inline-block;
     padding-bottom: 3px;
-    font-weight: 300;
+    font-weight: 150;
     transition: color 0.3s ease;
     cursor: pointer; /* Make both functional and non-functional elements have pointer cursor */
 }

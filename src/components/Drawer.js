@@ -5,30 +5,30 @@ import { Link } from 'react-router-dom';
 const Drawer = () => {
   const [isOpen, setIsOpen] = useState(false); // Drawer open/close state
 
-  const toggleDrawer = (event) => {
-    // Prevent the drawer from closing when clicking on a link
-    event.stopPropagation();
+  const toggleDrawer = () => {
     setIsOpen(!isOpen); // Toggle drawer visibility
   };
 
   return (
     <>
-      {/* Drawer container */}
+      {/* Drawer and text */}
       <div className={`drawer ${isOpen ? 'open' : ''}`} onClick={toggleDrawer}>
-        {/* "Click to navigate" text */}
         <div className={`menu-text ${isOpen ? 'hidden' : ''}`}>
           Click to navigate
         </div>
 
-        {/* Menu items - Links are only functional when the drawer is open */}
-        <ul className={isOpen ? 'visible' : ''}>
-          <li>{isOpen ? <Link to="/" onClick={(e) => e.stopPropagation()}>Home</Link> : <span>Home</span>}</li>
-          <li>{isOpen ? <Link to="/about" onClick={(e) => e.stopPropagation()}>Boarding Home Policy</Link> : <span>Boarding Home</span>}</li>
-          <li>{isOpen ? <Link to="/contact" onClick={(e) => e.stopPropagation()}>Contact</Link> : <span>Contact</span>}</li>
+        {/* Updated menu items */}
+        <ul className={isOpen ? 'visible' : 'hidden'}>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/who-we-are">Who We Are</Link></li> {/* New link */}
+          <li><Link to="/mission">Mission</Link></li> {/* New link */}
+          <li><Link to="/about">Boarding Home Policy</Link></li>
+          <li><Link to="/our-tech">Our Tech</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
 
-      {/* Overlay to close drawer when clicking outside */}
+      {/* Overlay to darken the background when drawer is open */}
       {isOpen && <div className="drawer-overlay" onClick={toggleDrawer}></div>}
     </>
   );
