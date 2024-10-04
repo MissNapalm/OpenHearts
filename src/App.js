@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Hero from './components/Hero'; // Hero page component
+import About from './components/About'; // About Us page component
+import Contact from './components/Contact'; // Contact page component
+import Drawer from './components/Drawer'; // Drawer for navigation
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        {/* Drawer remains static */}
+        <Drawer />
+
+        {/* Routes to switch between pages */}
+        <Routes>
+          <Route path="/" element={<Hero />} /> {/* Default route for the Hero page */}
+          <Route path="/about" element={<About />} /> {/* Route for the About Us page */}
+          <Route path="/contact" element={<Contact />} /> {/* Route for the Contact page */}
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
