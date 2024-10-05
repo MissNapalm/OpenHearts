@@ -1,9 +1,7 @@
-/* Hero Section */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+
 .hero {
     height: 100vh;
-    background-image: url('./background.jpg'); /* Use a high-quality background image */
-    background-size: cover;
-    background-position: center;
     position: relative;
     display: flex;
     justify-content: center;
@@ -12,26 +10,8 @@
     color: white;
     z-index: 1;
     overflow: hidden;
-    animation: zoom 20s infinite; /* Smooth zoom effect */
-}
-
-/* Parallax background effect */
-@keyframes zoom {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-/* Hero overlay to improve text visibility */
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
-    z-index: -1;
+    font-family: 'Playfair Display', sans-serif;
+    background-attachment: fixed; /* Parallax effect */
 }
 
 /* Hero content */
@@ -39,6 +19,24 @@
     max-width: 80%;
     margin: 0 auto;
     animation: fadeIn 2s ease-in-out; /* Fade-in animation for hero content */
+    z-index: 2; /* Keep the content above the background images */
+}
+
+/* Background image layers */
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.background-layer.visible {
+    opacity: 1;
 }
 
 /* Hero heading */
@@ -55,19 +53,23 @@
 
 .hero-text-container .smaller-heading {
     font-size: 3.3rem; /* Adjust the size of the second <h1> */
-    font-weight: 450; /* Optional: Adjust the weight if needed */
-    margin-top: 0; /* Remove any additional space between the headings */
-    margin-bottom: 20px; /* Add some space before the paragraph */
+    font-weight: 200; /* Optional: Adjust the weight if needed */
+    margin-top: 10px;
+    text-transform: lowercase;
+    margin-bottom: 20px;
 }
 
 /* Hero subheading */
-
+/* Hero subheading with dark shadow */
 .hero p {
     font-size: 1.6rem;
-    font-weight: 300;
-    margin-bottom: 0px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    text-transform: lowercase;
     opacity: 0; /* Start invisible */
     animation: fadeIn 2s ease-in-out 0.5s forwards; /* Slight delay for subheading and use 'forwards' to maintain final state */
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.9); /* Add a larger, darker shadow */
+    color: white; /* Ensures the text color is bright enough */
 }
 
 
