@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/OpenHearts/static/css/main.0ade376a.css",
+    "main.js": "/OpenHearts/static/js/main.47edabb9.js",
+    "static/js/453.14863c47.chunk.js": "/OpenHearts/static/js/453.14863c47.chunk.js",
+    "static/media/image1.jpg": "/OpenHearts/static/media/image1.edb015c59f30e569a3d4.jpg",
+    "static/media/whowearebg.jpg": "/OpenHearts/static/media/whowearebg.b696f75f63af3f94b489.jpg",
+    "static/media/image4.jpg": "/OpenHearts/static/media/image4.137acabd28988a0ee5f6.jpg",
+    "static/media/background3.jpg": "/OpenHearts/static/media/background3.8e7eb72e878cf7fc93db.jpg",
+    "static/media/background2.jpg": "/OpenHearts/static/media/background2.7bfe152f216ab96525c2.jpg",
+    "static/media/background4.jpg": "/OpenHearts/static/media/background4.42e6baeeba9bffa9e43d.jpg",
+    "static/media/image3.jpg": "/OpenHearts/static/media/image3.96b277260606ba79f560.jpg",
+    "static/media/aboutus.jpg": "/OpenHearts/static/media/aboutus.c38083319f8b30a4802d.jpg",
+    "static/media/background1.jpg": "/OpenHearts/static/media/background1.9cd2155548c424cc286a.jpg",
+    "static/media/image2.jpg": "/OpenHearts/static/media/image2.88e2dcb6ab30ba759b16.jpg",
+    "static/media/missionbg.jpg": "/OpenHearts/static/media/missionbg.093a74b753f8f4624d90.jpg",
+    "index.html": "/OpenHearts/index.html",
+    "main.0ade376a.css.map": "/OpenHearts/static/css/main.0ade376a.css.map",
+    "main.47edabb9.js.map": "/OpenHearts/static/js/main.47edabb9.js.map",
+    "453.14863c47.chunk.js.map": "/OpenHearts/static/js/453.14863c47.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ade376a.css",
+    "static/js/main.47edabb9.js"
+  ]
+}
